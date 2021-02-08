@@ -29,7 +29,7 @@ jobs:
       - name: Install Ocaml and Opam
         run: sudo apt update && sudo apt install opam -y && opam init -y && sudo apt install ocamlbuild -y
       - name: Install ounit
-        run: opam install ounit2 -y 
+        run: opam install ounit2 -y && opam install ocamlfind -y
   
       - name: Run tests
         run: sh ./run_tests.sh
