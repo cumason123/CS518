@@ -5,3 +5,4 @@
 # Improvements
 
 - I needed to test edge cases better
+- Some of the functions are liely brittle
