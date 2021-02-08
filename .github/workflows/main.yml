@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run tests
-        run: sh run_tests
+        run: sh ./run_tests.sh
