@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Ocaml and Opam
-        run: sudo apt update && sudo apt install opam -y
+        run: sudo apt update && sudo apt install opam -y printf "y\ny" | opam init
       - name: Install ounit
         run: opam install ounit2
   
