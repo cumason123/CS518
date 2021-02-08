@@ -26,5 +26,10 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
+      - name: Install Ocaml and Opam
+        run: add-apt-repository ppa:avsm/ppa && apt update && apt install opam -y
+      - name: Install ounit
+        run: opam install ounit2
+  
       - name: Run tests
         run: sh ./run_tests.sh
