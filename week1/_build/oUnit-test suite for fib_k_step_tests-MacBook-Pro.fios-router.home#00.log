@@ -1,0 +1,218 @@
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Runner: processes
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Chooser: simple
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration suite_name = "test suite for fib_k_step_tests"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration cache_filename = "/Users/curtismason/workspace/CS518/week1/_build/oUnit-$(suite_name).cache"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration run_gc_full_major = "true"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration display = "true"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration results_style_1_X = "false"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration testdata_dir = "none"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration health_check_interval = "1."
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration verbose = "false"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration chooser = "simple"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration output_html_dir = "none"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration processes_kill_period = "5."
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration runner = "processes"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration shards = "2"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration processes_grace_period = "5."
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration log_encoding = "utf-8"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration output_junit_file = "none"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration ci = "false"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Configuration output_file = "/Users/curtismason/workspace/CS518/week1/_build/oUnit-$(suite_name)-$(shard_id).log"
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Using 2 workers maximum.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Starting worker number MacBook-Pro.fios-router.home#01.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Worker MacBook-Pro.fios-router.home#01 started.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Starting worker number MacBook-Pro.fios-router.home#02.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Worker MacBook-Pro.fios-router.home#02 started.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3, test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3, test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3, test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3, test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5, test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5, test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5, test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5, test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15, test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15, test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15, test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15, test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0, test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1, test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1, test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2, test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4, test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8, test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16, test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Start test test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16, test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16, test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16, test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 2 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 2 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: Test test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 2 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#02 I: End test test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 2 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 2 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17, test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 1 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 1 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 1 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 1 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Still 1 tests running : test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 1 tests running: test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: 0 tests running: .
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Worker MacBook-Pro.fios-router.home#02 has ended.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Worker MacBook-Pro.fios-router.home#01 has ended.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Used 2 worker during test execution.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Run 10 tests with shard MacBook-Pro.fios-router.home#02.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Run 11 tests with shard MacBook-Pro.fios-router.home#01.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Check health of shard MacBook-Pro.fios-router.home#02, 4 times.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Check health of shard MacBook-Pro.fios-router.home#01, 1 times.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: ==============
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Summary:
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:20:fib_k_step 5 2 == 17 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:19:fib_k_step 5 2 == 16 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:18:fib_k_step 5 2 == 8 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:17:fib_k_step 4 2 == 4 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:16:fib_k_step 3 2 == 2 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:15:fib_k_step 2 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:14:fib_k_step 1 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:13:fib_k_step 0 2 == 0 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:12:fib_k_step 5 2 == 15 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:11:fib_k_step 5 2 == 8 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:10:fib_k_step 4 2 == 4 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:9:fib_k_step 3 2 == 2 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:8:fib_k_step 2 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:7:fib_k_step 1 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:6:fib_k_step 0 2 == 0 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:5:fib_k_step 5 2 == 5 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:4:fib_k_step 4 2 == 3 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:3:fib_k_step 3 2 == 2 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:2:fib_k_step 2 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:1:fib_k_step 1 2 == 1 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Test test suite for fib_k_step_tests:0:fib_k_step 0 2 == 0 is successful.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Ran: 21 tests in: 0.12 seconds.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Cases: 21.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Tried: 21.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Errors: 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Failures: 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Skip: 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Todo: 0.
+2021-02-08T01:45:20+00:00 MacBook-Pro.fios-router.home#00 I: Timeout: 0.
