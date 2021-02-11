@@ -39,7 +39,7 @@ jobs:
           ocaml-version: ${{ matrix.ocaml-version }}
 
       - name: Install ounit
-        run: opam install ounit2 -y && opam install ocamlbuild -y
+        run: opam install ounit2 -y && opam install ocamlbuild -y && eval $(opam env)
   
       - name: Run tests
         run: sh ./run_tests.sh
