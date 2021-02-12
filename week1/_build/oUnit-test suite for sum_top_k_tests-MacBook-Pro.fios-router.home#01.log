@@ -1,6 +1,0 @@
-2021-02-12T19:32:09+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for sum_top_k_tests:0:sum_top_k 3 [10;2;4;1;0;6] == 16.
-2021-02-12T19:32:09+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for sum_top_k_tests:0:sum_top_k 3 [10;2;4;1;0;6] == 16 is successful.
-2021-02-12T19:32:09+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for sum_top_k_tests:0:sum_top_k 3 [10;2;4;1;0;6] == 16.
-2021-02-12T19:32:09+00:00 MacBook-Pro.fios-router.home#01 I: Start test test suite for sum_top_k_tests:2:sum_top_k 3 [1;1;0] == 2.
-2021-02-12T19:32:09+00:00 MacBook-Pro.fios-router.home#01 I: Test test suite for sum_top_k_tests:2:sum_top_k 3 [1;1;0] == 2 is successful.
-2021-02-12T19:32:09+00:00 MacBook-Pro.fios-router.home#01 I: End test test suite for sum_top_k_tests:2:sum_top_k 3 [1;1;0] == 2.
