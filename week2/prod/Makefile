@@ -1,6 +1,7 @@
 run:
 	ocamlbuild prod.byte
 	./prod.byte
+	make clean
 
 test:
 	make
