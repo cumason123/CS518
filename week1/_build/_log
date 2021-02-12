@@ -1,12 +1,12 @@
 ### Starting build.
 # Target: tests.ml.depends, tags: { extension:ml, file:tests.ml, ocaml, ocamldep, quiet }
-/Users/curtismason/.opam/4.11.1/bin/ocamldep.opt -modules tests.ml > tests.ml.depends # cached
+/Users/curtismason/.opam/4.11.1/bin/ocamldep.opt -modules tests.ml > tests.ml.depends
 # Target: hw1.ml.depends, tags: { extension:ml, file:hw1.ml, ocaml, ocamldep, quiet }
 /Users/curtismason/.opam/4.11.1/bin/ocamldep.opt -modules hw1.ml > hw1.ml.depends # cached
 # Target: hw1.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:hw1.cmo, file:hw1.ml, implem, ocaml, quiet }
-/Users/curtismason/.opam/4.11.1/bin/ocamlc.opt -c -I /Users/curtismason/.opam/4.11.1/lib/bytes -I /Users/curtismason/.opam/4.11.1/lib/oUnit -I /Users/curtismason/.opam/4.11.1/lib/ocaml -I /Users/curtismason/.opam/4.11.1/lib/ounit2 -I /Users/curtismason/.opam/4.11.1/lib/ounit2/advanced -I /Users/curtismason/.opam/4.11.1/lib/stdlib-shims -o hw1.cmo hw1.ml # cached
+/Users/curtismason/.opam/4.11.1/bin/ocamlc.opt -c -I /Users/curtismason/.opam/4.11.1/lib/bytes -I /Users/curtismason/.opam/4.11.1/lib/oUnit -I /Users/curtismason/.opam/4.11.1/lib/ocaml -I /Users/curtismason/.opam/4.11.1/lib/ounit2 -I /Users/curtismason/.opam/4.11.1/lib/ounit2/advanced -I /Users/curtismason/.opam/4.11.1/lib/stdlib-shims -o hw1.cmo hw1.ml
 # Target: tests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tests.cmo, file:tests.ml, implem, ocaml, quiet }
-/Users/curtismason/.opam/4.11.1/bin/ocamlc.opt -c -I /Users/curtismason/.opam/4.11.1/lib/bytes -I /Users/curtismason/.opam/4.11.1/lib/oUnit -I /Users/curtismason/.opam/4.11.1/lib/ocaml -I /Users/curtismason/.opam/4.11.1/lib/ounit2 -I /Users/curtismason/.opam/4.11.1/lib/ounit2/advanced -I /Users/curtismason/.opam/4.11.1/lib/stdlib-shims -o tests.cmo tests.ml # cached
+/Users/curtismason/.opam/4.11.1/bin/ocamlc.opt -c -I /Users/curtismason/.opam/4.11.1/lib/bytes -I /Users/curtismason/.opam/4.11.1/lib/oUnit -I /Users/curtismason/.opam/4.11.1/lib/ocaml -I /Users/curtismason/.opam/4.11.1/lib/ounit2 -I /Users/curtismason/.opam/4.11.1/lib/ounit2/advanced -I /Users/curtismason/.opam/4.11.1/lib/stdlib-shims -o tests.cmo tests.ml
 # Target: tests.byte, tags: { byte, dont_link_with, extension:byte, file:tests.byte, link, ocaml, program, quiet }
-/Users/curtismason/.opam/4.11.1/bin/ocamlc.opt -I /Users/curtismason/.opam/4.11.1/lib/bytes -I /Users/curtismason/.opam/4.11.1/lib/oUnit -I /Users/curtismason/.opam/4.11.1/lib/ocaml -I /Users/curtismason/.opam/4.11.1/lib/ounit2 -I /Users/curtismason/.opam/4.11.1/lib/ounit2/advanced -I /Users/curtismason/.opam/4.11.1/lib/stdlib-shims stdlib_shims.cma unix.cma oUnitAdvanced.cma oUnit.cma hw1.cmo tests.cmo -o tests.byte # cached
+/Users/curtismason/.opam/4.11.1/bin/ocamlc.opt -I /Users/curtismason/.opam/4.11.1/lib/bytes -I /Users/curtismason/.opam/4.11.1/lib/oUnit -I /Users/curtismason/.opam/4.11.1/lib/ocaml -I /Users/curtismason/.opam/4.11.1/lib/ounit2 -I /Users/curtismason/.opam/4.11.1/lib/ounit2/advanced -I /Users/curtismason/.opam/4.11.1/lib/stdlib-shims stdlib_shims.cma unix.cma oUnitAdvanced.cma oUnit.cma hw1.cmo tests.cmo -o tests.byte
 # Compilation successful.
