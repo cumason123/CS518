@@ -5,3 +5,7 @@ test:
 	ocamlbuild -pkgs qcheck q$(q).byte
 	./q$(q).byte
 	printf '#use "topfind";;\n#require "qcheck";;\n#use "q%s.ml";;\n' $(q) | ocaml
+
+test_list:
+	ocamlbuild -pkgs ounit2,qcheck test_list.byte
+	./test_list.byte
