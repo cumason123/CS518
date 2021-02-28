@@ -4,6 +4,7 @@
 
 (* [odd_divisor x] is some odd divisor of [x]. *)
 (* requires: [x] >= 0 *)
+open QCheck
 let odd_divisor x =
   if x<3 then 1 else
     let rec search y =
@@ -29,3 +30,22 @@ let avg lst =
   in
   let (s,n) = loop (0,0) lst
   in float_of_int s /. float_of_int n
+
+(* odd_divisor fails on smallest int of value 4 *)
+(* let odd_test = Test.make ~name:"odd_divisor test should fail" ~count:1000 (make (Gen.int_range 0 4)) (
+  fun x -> let divisor = odd_divisor x in 
+  match (divisor mod 2) with
+  | 0 -> false
+  | _ -> match x mod divisor with
+    | 0 -> true
+    | _ -> false)
+;; *)
+
+(* max fails because it acts like a min function *)
+(* let max_test = Test.make ~name:"max test should fail" ~count: 100 (make Gen.pint) (
+  fun x -> if (max x (x+3)) == x then false else true 
+);; *)
+
+let main_test = QCheck_runner.run_tests[
+  max_test;
+]
