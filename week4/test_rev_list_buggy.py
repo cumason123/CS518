@@ -1,5 +1,5 @@
-import pytest
-from rev_list_buggy import rev_list_buggy1, rev_list_buggy2
+import pytest # type: ignore
+from rev_list_buggy import rev_list
 
 @pytest.mark.parametrize(
     "input,expected", 
@@ -10,13 +10,11 @@ from rev_list_buggy import rev_list_buggy1, rev_list_buggy2
         (-5, TypeError)
     ]
 )
-def test_rev_list_buggy1(input,expected):
+def test_rev_list(input,expected):
     # Pytest overloads asserts to test values in list
     if not isinstance(expected, list):
         with pytest.raises(expected):
-            rev_list_buggy1(input)
+            rev_list(input)
     else:
-        rev_list_buggy1(input)
+        rev_list(input)
         assert input == expected, f"Expected {expected} but found {input}"
-
-# def test_rev_list_buggy2():
