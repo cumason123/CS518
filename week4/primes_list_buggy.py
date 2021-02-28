@@ -1,9 +1,9 @@
 import typing
-def primes_list(n: typing.List):
+def primes_list(n: typing.List[int]):
    
     ## input: n an integer > 1
     ## returns: list of all the primes up to and including n
-    primes = []
+    primes: typing.List[int] = []
 
     if not isinstance(n, int):
         raise TypeError(f"primes_list expected positive int but found {type(n)}")
