@@ -26,7 +26,7 @@ def rev_list_buggy2(L: typing.List):
     Modifies L such that its elements are in reverse order
     returns: nothing
     """
-    # Function flips array twice effectively
+    # Function flips array twice effectively and does not use temp correctly
     for i in range(len(L)):
         j = len(L) - i -1
         temp = L[i]
