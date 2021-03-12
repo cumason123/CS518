@@ -1,13 +1,13 @@
 // dnw?
 method integerDiv(n: nat, d: nat) returns (r: nat, q: nat)
     requires n >= 0 && d > 0
-    // ensures n == (q * d + r) // this postcondition doesn't work?
-    ensures 0 <= r < d
+    ensures 0 <= r < d && n == (q * d + r)
 {
     q := 0;
     r := n;
     while (r >= d) 
-        invariant 0 <= r <= n; 
+        decreases r
+        invariant q * d + r == n; 
 
     {   
         q := q + 1;
