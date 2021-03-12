@@ -1,6 +1,6 @@
 method Reverse(a: array<char>) returns (b: array<char>)
     requires  a.Length > 0
-    // ensures a.Length > 0 ==> (forall k :: 0 <= k < a.Length ==> a[k] == b[a.Length - 1 - k])
+    ensures a.Length > 0 ==> (forall k :: 0 <= k < a.Length ==> a[k] == b[a.Length - 1 - k])
     ensures old(multiset(a[..])) == multiset(b[..]) 
 
 {
@@ -9,8 +9,7 @@ method Reverse(a: array<char>) returns (b: array<char>)
     while (i < a.Length) 
         invariant 0 <= i <= a.Length;
     {
-        //b[a.Length - 1 - i] := a[i];
-        b[i] := a[i];
+        b[a.Length - 1 - i] := a[i];
         i := i + 1;
     }
 }
@@ -23,11 +22,11 @@ method Main()
     // assert b[..] == ['h', 'g', 'f', 'e', 'd', 'c', 'b', 'a'];
     // print b[..];
 
-    var a := new char [2];
-    a[0], a[1]:= 'a', 'b';
-
+    var a := new char [1];
+    a[0] := 'a';
+    assert a[..] == ['a'];
     var b := Reverse(a);
-    assert b[..] == ['b', 'a'];
+    assert b[..] == ['a'];
     print b[..];
 
     // a := new char[1];
