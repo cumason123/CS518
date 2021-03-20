@@ -11,14 +11,18 @@ function sumn(n : int) : int
      { n * (n + 1) / 2}
 
 method sum(n : int) returns (s : int)
-// requires ... ;
+requires n > 0; 
 ensures s == sumn(n) ; // the equality which we ask Dafny to verify for us
 {
    var i := 0;
    s := 0;
+
    while i < n
-   // invariant ... ;
-   // decreases ... ;
+   invariant 0 <= s <= sumn(i);
+   invariant 0 <= i <= n;
+   decreases n - i;
+   invariant sumn(i) <= s;
+
    {
       i := i + 1;
       s := s + i;
