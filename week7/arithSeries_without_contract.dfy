@@ -18,10 +18,9 @@ ensures s == sumn(n) ; // the equality which we ask Dafny to verify for us
    s := 0;
 
    while i < n
-   invariant 0 <= s <= sumn(i);
    invariant 0 <= i <= n;
    decreases n - i;
-   invariant sumn(i) <= s;
+   invariant s == sumn(i);
 
    {
       i := i + 1;
