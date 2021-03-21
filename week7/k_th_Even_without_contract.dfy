@@ -4,13 +4,13 @@
 
 method kthEven(k : int ) returns (e : int)
 requires k > 0 ;
-ensures e / 2 == k;
+ensures e / 2 == k - 1;
 {
   e := 0;
   var i := 1;
 
   while (i < k)
-  invariant e / 2 == i ;
+  invariant e / 2 == i - 1 ;
   invariant 0 < i <= k
   decreases k - i ;
   {
