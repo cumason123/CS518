@@ -11,6 +11,6 @@ end_of_list.
 
 formulas(goals).
 
-  m(y,x) = m(x,y).
+  ((m(x,e) = e) & (m(e,x) = e)) -> (x = e).
 
 end_of_list.

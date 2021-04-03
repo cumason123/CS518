@@ -1,0 +1,35 @@
+% Usage:
+%   $ prover9 -f AK_group_inverse.in > AK_group_inverse.prover9.out
+% or
+%   $ mace4 -c -f AK_group_inverse.in > AK_group_inverse.mace4.out
+% or
+%   $ prover9 < AK_group_inverse.in
+
+% recommended parameters, none essential:
+
+% set(binary_resolution).
+% clear(print_initial_clauses).
+% clear(print_kept).
+% clear(print_given).
+% assign(max_seconds,5).
+% assign(stats,none).
+
+% commenting out any of the lines starting with "clear",
+% as well as changing the "stats" level, will produce more output.
+
+formulas(assumptions).
+
+  % five axioms of group theory, not all of them are necessary 
+
+  m(m(x,y),z) = m(x,m(y,z)).    % m is associative
+  m(x,e) = x.                   % e is a right identity
+  m(x,i(x)) = e.                % i(x) is right inverse of x
+  m(e,x) = x.                   % e is a left identity
+  m(i(x),x) = e.                % i(x) is left inverse of x
+
+end_of_list.
+
+formulas(goals).
+  (x != y -> i(x) != i(y))      % inverse operation is one-one 
+    & ( i(i(x)) = x ) .         % inverse operation is a reflection 
+end_of_list.

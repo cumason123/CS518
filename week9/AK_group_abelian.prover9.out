@@ -1,7 +1,7 @@
 ============================== Prover9 ===============================
 Prover9 (64) version 2009-11A, November 2009.
-Process 3153 was started by osboxes on osboxes,
-Fri Apr  2 21:14:47 2021
+Process 4952 was started by osboxes on osboxes,
+Fri Apr  2 23:51:32 2021
 The command was "prover9 -f AK_group_abelian.in".
 ============================== end of head ===========================
 
@@ -14,14 +14,149 @@ formulas(assumptions).
 m(m(x,y),z) = m(x,m(y,z)).
 m(x,e) = x.
 m(x,i(x)) = e.
+m(e,x) = x.
+m(i(x),x) = e.
 end_of_list.
-%%ERROR: A term cannot be constructed from the marked string:
 
+formulas(goals).
+m(y,x) = m(x,y).
+end_of_list.
 
+============================== end of input ==========================
 
-  %%START ERROR%%((min(x,e) = x) -> (min(e,x) = x)) & ((m(x,i(x)) = e) -> (m(i(x),x) = e))
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
 
-end_of_list.%%END ERROR%%
+% Formulas that are not ordinary clauses:
+1 m(y,x) = m(x,y) # label(non_clause) # label(goal).  [goal].
 
-Fatal error:  sread_term error
+============================== end of process non-clausal formulas ===
 
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+m(x,e) = x.  [assumption].
+m(x,i(x)) = e.  [assumption].
+m(e,x) = x.  [assumption].
+m(i(x),x) = e.  [assumption].
+m(c1,c2) != m(c2,c1).  [deny(1)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+No predicates eliminated.
+
+============================== end predicate elimination =============
+
+Auto_denials:  (no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ = ]).
+Function symbol precedence:  function_order([ e, c1, c2, m, i ]).
+After inverse_order: Function symbol precedence:  function_order([ e, c1, c2, m, i ]).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(paramodulation).  % (positive equality literals)
+
+Auto_process settings:  (no changes).
+
+kept:      2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+kept:      3 m(x,e) = x.  [assumption].
+kept:      4 m(x,i(x)) = e.  [assumption].
+kept:      5 m(e,x) = x.  [assumption].
+kept:      6 m(i(x),x) = e.  [assumption].
+           7 m(c1,c2) != m(c2,c1).  [deny(1)].
+kept:      8 m(c2,c1) != m(c1,c2).  [copy(7),flip(a)].
+
+============================== end of process initial clauses ========
+
+============================== CLAUSES FOR SEARCH ====================
+
+% Clauses after input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+3 m(x,e) = x.  [assumption].
+4 m(x,i(x)) = e.  [assumption].
+5 m(e,x) = x.  [assumption].
+6 m(i(x),x) = e.  [assumption].
+8 m(c2,c1) != m(c1,c2).  [copy(7),flip(a)].
+end_of_list.
+
+formulas(demodulators).
+2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+3 m(x,e) = x.  [assumption].
+4 m(x,i(x)) = e.  [assumption].
+5 m(e,x) = x.  [assumption].
+6 m(i(x),x) = e.  [assumption].
+end_of_list.
+
+============================== end of clauses for search =============
+
+============================== SEARCH ================================
+
+% Starting search at 0.01 seconds.
+
+given #1 (I,wt=11): 2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+
+given #2 (I,wt=5): 3 m(x,e) = x.  [assumption].
+
+given #3 (I,wt=6): 4 m(x,i(x)) = e.  [assumption].
+
+given #4 (I,wt=5): 5 m(e,x) = x.  [assumption].
+
+given #5 (I,wt=6): 6 m(i(x),x) = e.  [assumption].
+
+given #6 (I,wt=7): 8 m(c2,c1) != m(c1,c2).  [copy(7),flip(a)].
+
+given #7 (A,wt=8): 9 m(x,m(i(x),y)) = y.  [para(4(a,1),2(a,1,1)),rewrite([5(2)]),flip(a)].
+
+given #8 (T,wt=4): 11 i(e) = e.  [para(5(a,1),4(a,1))].
+
+given #9 (T,wt=5): 14 i(i(x)) = x.  [para(4(a,1),9(a,1,2)),rewrite([3(2)]),flip(a)].
+
+given #10 (T,wt=8): 12 m(i(x),m(x,y)) = y.  [para(6(a,1),2(a,1,1)),rewrite([5(2)]),flip(a)].
+
+given #11 (T,wt=10): 10 m(x,m(y,i(m(x,y)))) = e.  [para(4(a,1),2(a,1)),flip(a)].
+
+given #12 (A,wt=12): 13 m(x,m(y,m(i(m(x,y)),z))) = z.  [para(9(a,1),2(a,1)),flip(a)].
+
+given #13 (T,wt=9): 18 m(x,i(m(y,x))) = i(y).  [para(10(a,1),12(a,1,2)),rewrite([3(3)]),flip(a)].
+
+given #14 (T,wt=10): 25 i(m(x,y)) = m(i(y),i(x)).  [para(18(a,1),12(a,1,2)),flip(a)].
+
+============================== STATISTICS ============================
+
+Given=14. Generated=173. Kept=23. proofs=0.
+Usable=11. Sos=0. Demods=10. Limbo=0, Disabled=18. Hints=0.
+Kept_by_rule=0, Deleted_by_rule=0.
+Forward_subsumed=150. Back_subsumed=0.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=22 (0 lex), Back_demodulated=12. Back_unit_deleted=0.
+Demod_attempts=1353. Demod_rewrites=328.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=0. Nonunit_bsub_feature_tests=0.
+Megabytes=0.07.
+User_CPU=0.01, System_CPU=0.00, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+SEARCH FAILED
+
+Exiting with failure.
+
+Process 4952 exit (sos_empty) Fri Apr  2 23:51:32 2021
