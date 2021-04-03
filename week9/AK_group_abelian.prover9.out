@@ -1,0 +1,27 @@
+============================== Prover9 ===============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 3153 was started by osboxes on osboxes,
+Fri Apr  2 21:14:47 2021
+The command was "prover9 -f AK_group_abelian.in".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file AK_group_abelian.in
+
+
+formulas(assumptions).
+m(m(x,y),z) = m(x,m(y,z)).
+m(x,e) = x.
+m(x,i(x)) = e.
+end_of_list.
+%%ERROR: A term cannot be constructed from the marked string:
+
+
+
+  %%START ERROR%%((min(x,e) = x) -> (min(e,x) = x)) & ((m(x,i(x)) = e) -> (m(i(x),x) = e))
+
+end_of_list.%%END ERROR%%
+
+Fatal error:  sread_term error
+

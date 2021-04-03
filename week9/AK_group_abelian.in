@@ -1,0 +1,13 @@
+formulas(assumptions). 
+
+  m(m(x,y),z) = m(x,m(y,z)).    % m is associative
+  m(x,e) = x.                   % e is a right identity
+  m(x,i(x)) = e.                % i(x) is right inverse of x
+
+end_of_list.
+
+formulas(goals).
+
+  ((min(x,e) = x) -> (min(e,x) = x)) & ((m(x,i(x)) = e) -> (m(i(x),x) = e))
+
+end_of_list.

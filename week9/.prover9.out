@@ -1,0 +1,11 @@
+============================== Prover9 ===============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 3827 was started by osboxes on osboxes,
+Fri Apr  2 03:52:58 2021
+The command was "prover9 -f .in".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+Fatal error:  read_all_input, file .in not found
+

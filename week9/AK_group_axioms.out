@@ -1,0 +1,105 @@
+============================== Mace4 =================================
+Mace4 (64) version 2009-11A, November 2009.
+Process 5890 was started by osboxes on osboxes,
+Thu Apr  1 22:43:15 2021
+The command was "mace4 -c -f AK_group_axioms.in".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file AK_group_axioms.in
+
+
+formulas(assumptions).
+b(x,b(y,z)) = b(b(x,y),z).
+(exists e b(x,e) = x).
+(exists e b(x,i(x)) = e).
+(exists e b(i(x),x) = e).
+end_of_list.
+
+formulas(goals).
+(exists e b(e,x) = x).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (exists e b(x,e) = x) # label(non_clause).  [assumption].
+2 (exists e b(x,i(x)) = e) # label(non_clause).  [assumption].
+3 (exists e b(i(x),x) = e) # label(non_clause).  [assumption].
+4 (exists e b(e,x) = x) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== CLAUSES FOR SEARCH ====================
+
+formulas(mace4_clauses).
+b(x,b(y,z)) = b(b(x,y),z).
+b(x,f1(x)) = x.
+b(x,i(x)) = f2(x).
+b(i(x),x) = f3(x).
+b(x,c1) != c1.
+end_of_list.
+
+============================== end of clauses for search =============
+
+% There are no natural numbers in the input.
+
+============================== DOMAIN SIZE 2 =========================
+
+============================== STATISTICS ============================
+
+For domain size 2.
+
+Current CPU time: 0.00 seconds (total CPU time: 0.00 seconds).
+Ground clauses: seen=16, kept=16.
+Selections=1, assignments=1, propagations=4, current_models=0.
+Rewrite_terms=12, rewrite_bools=2, indexes=5.
+Rules_from_neg_clauses=3, cross_offs=3.
+
+============================== end of statistics =====================
+
+============================== DOMAIN SIZE 3 =========================
+
+============================== MODEL =================================
+
+interpretation( 3, [number=1, seconds=0], [
+
+        function(c1, [ 0 ]),
+
+        function(i(_), [ 0, 0, 0 ]),
+
+        function(f1(_), [ 1, 1, 0 ]),
+
+        function(f2(_), [ 2, 2, 2 ]),
+
+        function(f3(_), [ 2, 0, 2 ]),
+
+        function(b(_,_), [
+			   2, 0, 2,
+			   2, 1, 2,
+			   2, 2, 2 ])
+]).
+
+============================== end of model ==========================
+
+============================== STATISTICS ============================
+
+For domain size 3.
+
+Current CPU time: 0.00 seconds (total CPU time: 0.00 seconds).
+Ground clauses: seen=39, kept=39.
+Selections=7, assignments=10, propagations=18, current_models=1.
+Rewrite_terms=160, rewrite_bools=45, indexes=35.
+Rules_from_neg_clauses=3, cross_offs=9.
+
+============================== end of statistics =====================
+
+User_CPU=0.00, System_CPU=0.00, Wall_clock=0.
+
+Exiting with 1 model.
+
+Process 5890 exit (max_models) Thu Apr  1 22:43:15 2021
+The process finished Thu Apr  1 22:43:15 2021
