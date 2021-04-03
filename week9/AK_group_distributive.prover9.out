@@ -1,0 +1,338 @@
+============================== Prover9 ===============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 5200 was started by osboxes on osboxes,
+Sat Apr  3 00:06:05 2021
+The command was "prover9 -f AK_group_distributive.in".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file AK_group_distributive.in
+
+
+formulas(assumptions).
+m(m(x,y),z) = m(x,m(y,z)).
+m(x,e) = x.
+m(x,i(x)) = e.
+m(e,x) = x.
+m(i(x),x) = e.
+end_of_list.
+
+formulas(goals).
+i(m(x,y)) != m(i(x),i(y)).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 i(m(x,y)) != m(i(x),i(y)) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+m(x,e) = x.  [assumption].
+m(x,i(x)) = e.  [assumption].
+m(e,x) = x.  [assumption].
+m(i(x),x) = e.  [assumption].
+i(m(c1,c2)) = m(i(c1),i(c2)).  [deny(1)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+No predicates eliminated.
+
+============================== end predicate elimination =============
+
+Auto_denials:  (no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ = ]).
+Function symbol precedence:  function_order([ e, c1, c2, m, i ]).
+After inverse_order: Function symbol precedence:  function_order([ e, c1, c2, m, i ]).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(paramodulation).  % (positive equality literals)
+
+Auto_process settings:  (no changes).
+
+kept:      2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+kept:      3 m(x,e) = x.  [assumption].
+kept:      4 m(x,i(x)) = e.  [assumption].
+kept:      5 m(e,x) = x.  [assumption].
+kept:      6 m(i(x),x) = e.  [assumption].
+kept:      7 i(m(c1,c2)) = m(i(c1),i(c2)).  [deny(1)].
+
+============================== end of process initial clauses ========
+
+============================== CLAUSES FOR SEARCH ====================
+
+% Clauses after input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+3 m(x,e) = x.  [assumption].
+4 m(x,i(x)) = e.  [assumption].
+5 m(e,x) = x.  [assumption].
+6 m(i(x),x) = e.  [assumption].
+7 i(m(c1,c2)) = m(i(c1),i(c2)).  [deny(1)].
+end_of_list.
+
+formulas(demodulators).
+2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+3 m(x,e) = x.  [assumption].
+4 m(x,i(x)) = e.  [assumption].
+5 m(e,x) = x.  [assumption].
+6 m(i(x),x) = e.  [assumption].
+7 i(m(c1,c2)) = m(i(c1),i(c2)).  [deny(1)].
+end_of_list.
+
+============================== end of clauses for search =============
+
+============================== SEARCH ================================
+
+% Starting search at 0.01 seconds.
+
+given #1 (I,wt=11): 2 m(m(x,y),z) = m(x,m(y,z)).  [assumption].
+
+given #2 (I,wt=5): 3 m(x,e) = x.  [assumption].
+
+given #3 (I,wt=6): 4 m(x,i(x)) = e.  [assumption].
+
+given #4 (I,wt=5): 5 m(e,x) = x.  [assumption].
+
+given #5 (I,wt=6): 6 m(i(x),x) = e.  [assumption].
+
+given #6 (I,wt=10): 7 i(m(c1,c2)) = m(i(c1),i(c2)).  [deny(1)].
+
+given #7 (A,wt=8): 8 m(x,m(i(x),y)) = y.  [para(4(a,1),2(a,1,1)),rewrite([5(2)]),flip(a)].
+
+given #8 (T,wt=4): 10 i(e) = e.  [para(5(a,1),4(a,1))].
+
+given #9 (T,wt=5): 15 i(i(x)) = x.  [para(4(a,1),8(a,1,2)),rewrite([3(2)]),flip(a)].
+
+given #10 (T,wt=8): 11 m(i(x),m(x,y)) = y.  [para(6(a,1),2(a,1,1)),rewrite([5(2)]),flip(a)].
+
+given #11 (T,wt=10): 9 m(x,m(y,i(m(x,y)))) = e.  [para(4(a,1),2(a,1)),flip(a)].
+
+given #12 (A,wt=11): 12 m(c1,m(c2,m(i(c1),i(c2)))) = e.  [para(7(a,1),4(a,1,2)),rewrite([2(9)])].
+
+given #13 (T,wt=9): 22 m(x,i(m(y,x))) = i(y).  [para(9(a,1),11(a,1,2)),rewrite([3(3)]),flip(a)].
+
+given #14 (T,wt=7): 29 m(c2,c1) = m(c1,c2).  [back_rewrite(17),rewrite([28(6),15(3),15(4)])].
+
+given #15 (T,wt=8): 32 m(i(c2),m(c1,c2)) = c1.  [para(29(a,1),11(a,1,2))].
+
+given #16 (T,wt=10): 23 m(c2,m(i(c1),i(c2))) = i(c1).  [para(12(a,1),11(a,1,2)),rewrite([3(4)]),flip(a)].
+
+given #17 (A,wt=10): 28 i(m(x,y)) = m(i(y),i(x)).  [para(22(a,1),11(a,1,2)),flip(a)].
+
+given #18 (T,wt=11): 30 m(i(c2),i(c1)) = m(i(c1),i(c2)).  [back_rewrite(7),rewrite([28(4)])].
+
+given #19 (T,wt=11): 31 m(c2,m(c1,x)) = m(c1,m(c2,x)).  [para(29(a,1),2(a,1,1)),rewrite([2(4)]),flip(a)].
+
+given #20 (T,wt=8): 36 m(c1,m(c2,i(c1))) = c2.  [para(4(a,1),31(a,1,2)),rewrite([3(3)]),flip(a)].
+
+given #21 (T,wt=9): 38 m(i(c1),c2) = m(c2,i(c1)).  [para(36(a,1),11(a,1,2))].
+
+given #22 (A,wt=12): 33 m(i(c2),m(c1,m(c2,x))) = m(c1,x).  [para(32(a,1),2(a,1,1)),rewrite([2(8)]),flip(a)].
+
+given #23 (T,wt=9): 41 m(i(c2),c1) = m(c1,i(c2)).  [para(38(a,1),28(a,1,1)),rewrite([28(5),15(3),15(9)]),flip(a)].
+
+given #24 (T,wt=12): 37 m(c1,m(c2,m(i(c1),x))) = m(c2,x).  [para(8(a,1),31(a,1,2)),flip(a)].
+
+given #25 (T,wt=12): 39 m(c1,m(c2,m(c2,i(c1)))) = m(c2,c2).  [para(36(a,1),31(a,1,2)),flip(a)].
+
+given #26 (T,wt=13): 40 m(i(c1),m(c2,x)) = m(c2,m(i(c1),x)).  [para(38(a,1),2(a,1,1)),rewrite([2(5)]),flip(a)].
+
+given #27 (A,wt=14): 34 m(c2,m(i(c1),m(i(c2),x))) = m(i(c1),x).  [para(23(a,1),2(a,1,1)),rewrite([2(10)]),flip(a)].
+
+given #28 (T,wt=13): 42 m(i(c2),m(c1,x)) = m(c1,m(i(c2),x)).  [para(8(a,1),33(a,1,2,2))].
+
+given #29 (T,wt=15): 35 m(i(c2),m(i(c1),x)) = m(i(c1),m(i(c2),x)).  [para(30(a,1),2(a,1,1)),rewrite([2(6)]),flip(a)].
+
+given #30 (T,wt=16): 43 m(c1,m(c2,m(c2,m(i(c1),x)))) = m(c2,m(c2,x)).  [para(37(a,1),31(a,1,2)),flip(a)].
+
+given #31 (T,wt=16): 44 m(c1,m(c2,m(c2,m(c2,i(c1))))) = m(c2,m(c2,c2)).  [para(39(a,1),31(a,1,2)),flip(a)].
+
+given #32 (A,wt=16): 45 m(c2,m(i(c1),m(i(c1),i(c2)))) = m(i(c1),i(c1)).  [para(23(a,1),40(a,1,2)),flip(a)].
+
+given #33 (T,wt=20): 46 m(c2,m(i(c1),m(i(c1),m(i(c2),x)))) = m(i(c1),m(i(c1),x)).  [para(34(a,1),40(a,1,2)),flip(a)].
+
+given #34 (T,wt=20): 47 m(c1,m(c2,m(c2,m(c2,m(i(c1),x))))) = m(c2,m(c2,m(c2,x))).  [para(43(a,1),31(a,1,2)),flip(a)].
+
+given #35 (T,wt=20): 48 m(c1,m(c2,m(c2,m(c2,m(c2,i(c1)))))) = m(c2,m(c2,m(c2,c2))).  [para(44(a,1),31(a,1,2)),flip(a)].
+
+given #36 (T,wt=22): 49 m(c2,m(i(c1),m(i(c1),m(i(c1),i(c2))))) = m(i(c1),m(i(c1),i(c1))).  [para(45(a,1),40(a,1,2)),flip(a)].
+
+given #37 (A,wt=26): 50 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))) = m(i(c1),m(i(c1),m(i(c1),x))).  [para(46(a,1),40(a,1,2)),flip(a)].
+
+given #38 (T,wt=24): 51 m(c1,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))) = m(c2,m(c2,m(c2,m(c2,x)))).  [para(47(a,1),31(a,1,2)),flip(a)].
+
+given #39 (T,wt=24): 52 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))) = m(c2,m(c2,m(c2,m(c2,c2)))).  [para(48(a,1),31(a,1,2)),flip(a)].
+
+given #40 (T,wt=28): 53 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))) = m(i(c1),m(i(c1),m(i(c1),i(c1)))).  [para(49(a,1),40(a,1,2)),flip(a)].
+
+given #41 (T,wt=28): 55 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,x))))).  [para(51(a,1),31(a,1,2)),flip(a)].
+
+given #42 (A,wt=32): 54 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x)))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),x)))).  [para(50(a,1),40(a,1,2)),flip(a)].
+
+given #43 (T,wt=28): 56 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,c2))))).  [para(52(a,1),31(a,1,2)),flip(a)].
+
+given #44 (T,wt=32): 58 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))).  [para(55(a,1),31(a,1,2)),flip(a)].
+
+given #45 (T,wt=32): 60 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))).  [para(56(a,1),31(a,1,2)),flip(a)].
+
+given #46 (T,wt=34): 57 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1))))).  [para(53(a,1),40(a,1,2)),flip(a)].
+
+given #47 (A,wt=38): 59 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x))))).  [para(54(a,1),40(a,1,2)),flip(a)].
+
+given #48 (T,wt=36): 61 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))).  [para(58(a,1),31(a,1,2)),flip(a)].
+
+given #49 (T,wt=36): 62 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))).  [para(60(a,1),31(a,1,2)),flip(a)].
+
+given #50 (T,wt=40): 63 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1)))))).  [para(57(a,1),40(a,1,2)),flip(a)].
+
+given #51 (T,wt=40): 65 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))).  [para(61(a,1),31(a,1,2)),flip(a)].
+
+given #52 (A,wt=44): 64 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x)))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x)))))).  [para(59(a,1),40(a,1,2)),flip(a)].
+
+given #53 (T,wt=40): 66 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))).  [para(62(a,1),31(a,1,2)),flip(a)].
+
+given #54 (T,wt=44): 68 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))).  [para(65(a,1),31(a,1,2)),flip(a)].
+
+given #55 (T,wt=44): 70 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))).  [para(66(a,1),31(a,1,2)),flip(a)].
+
+given #56 (T,wt=46): 67 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1))))))).  [para(63(a,1),40(a,1,2)),flip(a)].
+
+given #57 (A,wt=50): 69 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x))))))).  [para(64(a,1),40(a,1,2)),flip(a)].
+
+given #58 (T,wt=48): 71 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))).  [para(68(a,1),31(a,1,2)),flip(a)].
+
+given #59 (T,wt=48): 72 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))).  [para(70(a,1),31(a,1,2)),flip(a)].
+
+given #60 (T,wt=52): 73 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1)))))))).  [para(67(a,1),40(a,1,2)),flip(a)].
+
+given #61 (T,wt=52): 75 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))).  [para(71(a,1),31(a,1,2)),flip(a)].
+
+given #62 (A,wt=56): 74 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x)))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x)))))))).  [para(69(a,1),40(a,1,2)),flip(a)].
+
+given #63 (T,wt=52): 76 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))).  [para(72(a,1),31(a,1,2)),flip(a)].
+
+given #64 (T,wt=56): 78 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))))).  [para(75(a,1),31(a,1,2)),flip(a)].
+
+given #65 (T,wt=56): 80 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))))).  [para(76(a,1),31(a,1,2)),flip(a)].
+
+given #66 (T,wt=58): 77 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1))))))))).  [para(73(a,1),40(a,1,2)),flip(a)].
+
+given #67 (A,wt=62): 79 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x))))))))).  [para(74(a,1),40(a,1,2)),flip(a)].
+
+given #68 (T,wt=60): 81 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))))).  [para(78(a,1),31(a,1,2)),flip(a)].
+
+given #69 (T,wt=60): 82 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))))).  [para(80(a,1),31(a,1,2)),flip(a)].
+
+given #70 (T,wt=64): 83 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1)))))))))).  [para(77(a,1),40(a,1,2)),flip(a)].
+
+given #71 (T,wt=64): 85 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))))))).  [para(81(a,1),31(a,1,2)),flip(a)].
+
+given #72 (A,wt=68): 84 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x)))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x)))))))))).  [para(79(a,1),40(a,1,2)),flip(a)].
+
+given #73 (T,wt=64): 86 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))))))).  [para(82(a,1),31(a,1,2)),flip(a)].
+
+given #74 (T,wt=68): 88 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))))))).  [para(85(a,1),31(a,1,2)),flip(a)].
+
+given #75 (T,wt=68): 90 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))))))).  [para(86(a,1),31(a,1,2)),flip(a)].
+
+given #76 (T,wt=70): 87 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1))))))))))).  [para(83(a,1),40(a,1,2)),flip(a)].
+
+given #77 (A,wt=74): 89 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x))))))))))).  [para(84(a,1),40(a,1,2)),flip(a)].
+
+given #78 (T,wt=72): 91 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))))))))).  [para(88(a,1),31(a,1,2)),flip(a)].
+
+given #79 (T,wt=72): 92 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))))))))).  [para(90(a,1),31(a,1,2)),flip(a)].
+
+given #80 (T,wt=76): 93 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1)))))))))))).  [para(87(a,1),40(a,1,2)),flip(a)].
+
+given #81 (T,wt=76): 95 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))))))))).  [para(91(a,1),31(a,1,2)),flip(a)].
+
+given #82 (A,wt=80): 94 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x)))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x)))))))))))).  [para(89(a,1),40(a,1,2)),flip(a)].
+
+given #83 (T,wt=76): 96 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))))))))).  [para(92(a,1),31(a,1,2)),flip(a)].
+
+given #84 (T,wt=80): 98 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))))))))))).  [para(95(a,1),31(a,1,2)),flip(a)].
+
+given #85 (T,wt=80): 100 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))))))))))).  [para(96(a,1),31(a,1,2)),flip(a)].
+
+given #86 (T,wt=82): 97 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1))))))))))))).  [para(93(a,1),40(a,1,2)),flip(a)].
+
+given #87 (A,wt=86): 99 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x))))))))))))).  [para(94(a,1),40(a,1,2)),flip(a)].
+
+given #88 (T,wt=84): 101 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))))))))))).  [para(98(a,1),31(a,1,2)),flip(a)].
+
+given #89 (T,wt=84): 102 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))))))))))).  [para(100(a,1),31(a,1,2)),flip(a)].
+
+given #90 (T,wt=88): 103 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1)))))))))))))).  [para(97(a,1),40(a,1,2)),flip(a)].
+
+given #91 (T,wt=88): 105 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))))))))))))).  [para(101(a,1),31(a,1,2)),flip(a)].
+
+given #92 (A,wt=92): 104 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x)))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x)))))))))))))).  [para(99(a,1),40(a,1,2)),flip(a)].
+
+given #93 (T,wt=88): 106 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))))))))))))).  [para(102(a,1),31(a,1,2)),flip(a)].
+
+given #94 (T,wt=92): 108 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))))))))))))).  [para(105(a,1),31(a,1,2)),flip(a)].
+
+given #95 (T,wt=92): 110 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))))))))))))).  [para(106(a,1),31(a,1,2)),flip(a)].
+
+given #96 (T,wt=94): 107 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2))))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1))))))))))))))).  [para(103(a,1),40(a,1,2)),flip(a)].
+
+given #97 (A,wt=98): 109 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c2),x))))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),x))))))))))))))).  [para(104(a,1),40(a,1,2)),flip(a)].
+
+given #98 (T,wt=96): 111 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x)))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x)))))))))))))))))))))).  [para(108(a,1),31(a,1,2)),flip(a)].
+
+given #99 (T,wt=96): 112 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1))))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2)))))))))))))))))))))).  [para(110(a,1),31(a,1,2)),flip(a)].
+
+given #100 (T,wt=100): 113 m(c2,m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c2)))))))))))))))))) = m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),m(i(c1),i(c1)))))))))))))))).  [para(107(a,1),40(a,1,2)),flip(a)].
+
+given #101 (T,wt=100): 114 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(i(c1),x))))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,x))))))))))))))))))))))).  [para(111(a,1),31(a,1,2)),flip(a)].
+
+given #102 (A,wt=100): 115 m(c1,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,i(c1)))))))))))))))))))))))))) = m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,m(c2,c2))))))))))))))))))))))).  [para(112(a,1),31(a,1,2)),flip(a)].
+
+============================== STATISTICS ============================
+
+Given=102. Generated=2935. Kept=114. proofs=0.
+Usable=96. Sos=0. Demods=96. Limbo=0, Disabled=24. Hints=0.
+Kept_by_rule=0, Deleted_by_rule=8.
+Forward_subsumed=2813. Back_subsumed=0.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=114 (0 lex), Back_demodulated=18. Back_unit_deleted=0.
+Demod_attempts=347228. Demod_rewrites=25107.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=0. Nonunit_bsub_feature_tests=0.
+Megabytes=0.58.
+User_CPU=0.05, System_CPU=0.04, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+SEARCH FAILED
+
+Exiting with failure.
+
+Process 5200 exit (sos_empty) Sat Apr  3 00:06:05 2021
