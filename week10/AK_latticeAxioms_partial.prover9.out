@@ -1,0 +1,61 @@
+============================== Prover9 ===============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 4383 was started by osboxes on osboxes,
+Sun Apr 11 00:06:34 2021
+The command was "prover9 -f AK_latticeAxioms_partial.in".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file AK_latticeAxioms_partial.in
+
+if(Prover9).
+% Conditional input included.
+set(binary_resolution).
+clear(print_initial_clauses).
+clear(print_kept).
+clear(print_given).
+assign(max_seconds,30).
+assign(stats,none).
+end_if.
+if(Mace4).
+% Conditional input omitted.
+end_if.
+op(400,infix,oplus).
+op(400,infix,otimes).
+
+formulas(assumptions).
+x <= x.
+x <= y & y <= x -> x = y.
+x <= y & y <= z -> x <= z.
+x <= Top.
+Bot <= x.
+z <= x otimes y <-> z <= x & z <= y.
+x oplus y <= z <-> x <= z & y <= z.
+(x oplus y) otimes z = (x otimes z) oplus (y otimes z).
+(x otimes y) oplus z = (x oplus z) otimes (y oplus z).
+end_of_list.
+
+formulas(goals).
+(exists y -(x oplus y = Top & x otimes y = Bot)).
+x oplus y = y oplus x & x otimes y = y otimes x.
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 x <= y & y <= x -> x = y # label(non_clause).  [assumption].
+2 x <= y & y <= z -> x <= z # label(non_clause).  [assumption].
+3 z <= x otimes y <-> z <= x & z <= y # label(non_clause).  [assumption].
+4 x oplus y <= z <-> x <= z & y <= z # label(non_clause).  [assumption].
+
+%%ERROR: If there are multiple goals, all must be positive:
+
+%%START ERROR%%
+(exists y -(x oplus y = Top & x otimes y = Bot)).
+%%END ERROR%%
+
+Fatal error:  If there are multiple goals, all must be positive
+

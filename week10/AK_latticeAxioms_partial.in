@@ -1,12 +1,3 @@
-% Usage:
-%  prover9 -f AK_latticeAxioms_partial.in > AK_latticeAxioms_partial.prover9.out
-% or
-%  mace4 -c -f AK_latticeAxioms_partial.in > AK_latticeAxioms_partial.mace4.out
-% or
-%  prover9 < AK_latticeAxioms_partial.in
-% or 
-%  mace4 -c -f AK_latticeAxioms_partial.in
-
 if(Prover9). % Options for Prover9
   set(binary_resolution).
   clear(print_initial_clauses).
@@ -15,9 +6,6 @@ if(Prover9). % Options for Prover9
   assign(max_seconds,30).
   assign(stats,none).
 end_if.
-
-% commenting out any of the lines starting with "clear",
-% as well as changing the "stats" level, will produce more output.
 
 if(Mace4).   % Options for Mace4
   set(arithmetic).
@@ -49,6 +37,9 @@ x oplus y <= z  <-> x <= z & y <= z.
 end_of_list.
 
 formulas(goals).
+exists y  (((x oplus y) = Top) & ((x otimes y) = Bot)). % not complemented
+ ((x oplus y) = (y oplus x)) & ((x otimes y) = (y otimes x)). % commutative
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % an element x has a complement y, if it is the case
 % that both 'x oplus y = Top' and 'x otimes y = Bot'.
