@@ -37,7 +37,7 @@ x oplus y <= z  <-> x <= z & y <= z.
 end_of_list.
 
 formulas(goals).
-exists y  (((x oplus y) = Top) & ((x otimes y) = Bot)). % not complemented
+exists y  (((x oplus y) = Top) & ((x otimes y) = Bot)). % not complemented therefore this fails
  ((x oplus y) = (y oplus x)) & ((x otimes y) = (y otimes x)). % commutative
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
