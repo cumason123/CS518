@@ -1,0 +1,164 @@
+============================== Prover9 ===============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 4006 was started by osboxes on osboxes,
+Sat Apr 10 23:55:15 2021
+The command was "prover9 -f 1b.in".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file 1b.in
+
+
+formulas(assumptions).
+(exists x (l(x) & k(x))).
+l(x) <-> x = a | x = b | x = c.
+k(x) & v(y) -> r(y,x) & h(x,y).
+h(a,x) -> -h(c,x).
+x != b <-> h(a,x).
+-r(x,a) -> h(b,x).
+h(a,x) -> h(b,x).
+(exists y -h(x,y)).
+a != b.
+end_of_list.
+
+formulas(goals).
+(exists x (k(x) -> x = b)).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (exists x (l(x) & k(x))) # label(non_clause).  [assumption].
+2 l(x) <-> x = a | x = b | x = c # label(non_clause).  [assumption].
+3 k(x) & v(y) -> r(y,x) & h(x,y) # label(non_clause).  [assumption].
+4 h(a,x) -> -h(c,x) # label(non_clause).  [assumption].
+5 x != b <-> h(a,x) # label(non_clause).  [assumption].
+6 -r(x,a) -> h(b,x) # label(non_clause).  [assumption].
+7 h(a,x) -> h(b,x) # label(non_clause).  [assumption].
+8 (exists y -h(x,y)) # label(non_clause).  [assumption].
+9 (exists x (k(x) -> x = b)) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+l(c1).  [clausify(1)].
+k(c1).  [clausify(1)].
+-l(x) | a = x | b = x | c = x.  [clausify(2)].
+l(x) | a != x.  [clausify(2)].
+l(x) | b != x.  [clausify(2)].
+l(x) | c != x.  [clausify(2)].
+-k(x) | -v(y) | r(y,x).  [clausify(3)].
+-k(x) | -v(y) | h(x,y).  [clausify(3)].
+-h(a,x) | -h(c,x).  [clausify(4)].
+b = x | h(a,x).  [clausify(5)].
+b != x | -h(a,x).  [clausify(5)].
+r(x,a) | h(b,x).  [clausify(6)].
+-h(a,x) | h(b,x).  [clausify(7)].
+-h(x,f1(x)).  [clausify(8)].
+a != b.  [assumption].
+k(x).  [deny(9)].
+b != x.  [deny(9)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+Eliminating l/1
+10 -l(x) | a = x | b = x | c = x.  [clausify(2)].
+11 l(c1).  [clausify(1)].
+Derived: a = c1 | b = c1 | c = c1.  [resolve(10,a,11,a)].
+12 l(x) | a != x.  [clausify(2)].
+13 l(x) | b != x.  [clausify(2)].
+14 l(x) | c != x.  [clausify(2)].
+
+Eliminating k/1
+15 -k(x) | -v(y) | r(y,x).  [clausify(3)].
+16 k(c1).  [clausify(1)].
+Derived: -v(x) | r(x,c1).  [resolve(15,a,16,a)].
+17 -k(x) | -v(y) | h(x,y).  [clausify(3)].
+Derived: -v(x) | h(c1,x).  [resolve(17,a,16,a)].
+18 k(x).  [deny(9)].
+Derived: -v(x) | r(x,y).  [resolve(18,a,15,a)].
+Derived: -v(x) | h(y,x).  [resolve(18,a,17,a)].
+
+Eliminating r/2
+
+Eliminating v/1
+
+============================== end predicate elimination =============
+
+Auto_denials:  (non-Horn, no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ =, h ]).
+Function symbol precedence:  function_order([ a, b, c, c1, f1 ]).
+After inverse_order:  (no changes).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(paramodulation).  % (positive equality literals)
+  % set(binary_resolution).  % (non-Horn)
+  % set(neg_ur_resolution).  % (non-Horn, less than 100 clauses)
+
+Auto_process settings:
+  % set(factor).  % (non-Horn)
+  % set(unit_deletion).  % (non-Horn)
+
+kept:      19 -h(a,x) | -h(c,x).  [clausify(4)].
+kept:      20 b = x | h(a,x).  [clausify(5)].
+kept:      21 b != x | -h(a,x).  [clausify(5)].
+kept:      22 -h(a,x) | h(b,x).  [clausify(7)].
+kept:      23 -h(x,f1(x)).  [clausify(8)].
+           24 a != b.  [assumption].
+kept:      25 b != a.  [copy(24),flip(a)].
+           26 b != x.  [deny(9)].
+
+============================== PROOF =================================
+
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 3.
+% Level of proof is 2.
+% Maximum clause weight is 0.000.
+% Given clauses 0.
+
+9 (exists x (k(x) -> x = b)) # label(non_clause) # label(goal).  [goal].
+26 b != x.  [deny(9)].
+27 $F.  [copy(26),xx(a)].
+
+============================== end of proof ==========================
+
+============================== STATISTICS ============================
+
+Given=0. Generated=7. Kept=6. proofs=1.
+Usable=0. Sos=0. Demods=0. Limbo=6, Disabled=21. Hints=0.
+Kept_by_rule=0, Deleted_by_rule=0.
+Forward_subsumed=0. Back_subsumed=0.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=0 (0 lex), Back_demodulated=0. Back_unit_deleted=0.
+Demod_attempts=0. Demod_rewrites=0.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=0. Nonunit_bsub_feature_tests=0.
+Megabytes=0.05.
+User_CPU=0.01, System_CPU=0.00, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+THEOREM PROVED
+
+Exiting with 1 proof.
+
+Process 4006 exit (max_proofs) Sat Apr 10 23:55:15 2021

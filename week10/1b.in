@@ -1,0 +1,37 @@
+formulas(assumptions). 
+
+% Someone who lives in Dreadbury Mansion killed Aunt Agatha.
+  exists x (l(x) & k(x)).   
+
+% Agatha, the butler, and Charles live in Dreadbury Mansion, and are the only people who live therein.
+  l(x) <-> (x=a | x=b | x=c). 
+
+% A killer always hates his victim, and is never richer than his victim.
+  (k(x) & v(y)) -> (r(y,x) & h(x,y)). 
+
+% Charles hates no one that Aunt Agatha hates.
+  h(a,x) -> -h(c,x). 
+
+% Agatha hates everyone except the butler.
+  x != b -> h(a,x). 
+
+% The butler hates everyone not richer than Aunt Agatha
+  (-r(x,a)) -> h(b,x). 
+
+% The butler hates everyone Aunt Agatha hates.
+  h(a,x) -> h(b,x). 
+
+% No one hates everyone.
+  exists y (-h(x,y)). 
+
+% Agatha is not the butler.
+  a != b. 
+
+
+end_of_list.
+
+formulas(goals).
+
+   exists x (k(x) -> x = a).
+  
+end_of_list.

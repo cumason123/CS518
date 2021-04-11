@@ -1,0 +1,68 @@
+% Usage:
+%  prover9 -f AK_latticeAxioms_partial.in > AK_latticeAxioms_partial.prover9.out
+% or
+%  mace4 -c -f AK_latticeAxioms_partial.in > AK_latticeAxioms_partial.mace4.out
+% or
+%  prover9 < AK_latticeAxioms_partial.in
+% or 
+%  mace4 -c -f AK_latticeAxioms_partial.in
+
+if(Prover9). % Options for Prover9
+  set(binary_resolution).
+  clear(print_initial_clauses).
+  clear(print_kept).
+  clear(print_given).
+  assign(max_seconds,30).
+  assign(stats,none).
+end_if.
+
+% commenting out any of the lines starting with "clear",
+% as well as changing the "stats" level, will produce more output.
+
+if(Mace4).   % Options for Mace4
+  set(arithmetic).
+  assign(max_seconds, 1).
+end_if.
+
+op(400,infix,oplus).  % declares “oplus” to be an infix op with precedence 400
+op(400,infix,otimes). % declares “otimes” to be an infix op with precedence 400
+
+formulas (assumptions).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% below are the axioms of DISTRIBUTIVE LATTICES %%%%%%
+
+% axioms for a partial order %%%%%%%%%%%%%%%%%%%%%%%%%
+x <= x.
+x <= y & y <= x -> x=y.
+x <= y & y <= z -> x <= z.
+
+% lattice axioms %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+x <= Top.
+Bot <= x.
+z <= x otimes y <-> z <= x & z <= y.
+x oplus y <= z  <-> x <= z & y <= z.
+
+% distributivity %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(x oplus y) otimes z = (x otimes z) oplus (y otimes z).
+(x otimes y) oplus z = (x oplus z) otimes (y oplus z).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+end_of_list.
+
+formulas(goals).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% an element x has a complement y, if it is the case
+% that both 'x oplus y = Top' and 'x otimes y = Bot'.
+% a 'distributive lattice is complemented' if every
+% element in the lattice has a complement.
+
+% QUESTION: Is a distributive lattice complemented?
+
+% a 'distributive lattice is commutative' if for
+% all elements x and y, it is the case that both
+% 'x oplus y = y oplus x' and 'x otimes y = y otimes x'.
+
+% QUESTION: Is a distributive lattice commutative?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+end_of_list.
+
