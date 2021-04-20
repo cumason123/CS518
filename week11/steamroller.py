@@ -1,5 +1,6 @@
 from z3 import *
 x, y, z, u = Ints('x y z u')
+s = Solver()
 
 
 def Wolf(x: int):
@@ -34,19 +35,28 @@ def Plant(x: int):
     return Grain(x)
 
 
-wolfImply = Implies(Wolf(x), Animal(x))
-foxImply = Implies(Fox(x), Animal(x))
-BirdImply = Implies(Bird(x), Animal(x))
-caterpillarImply = Implies(Caterpillar(x), Animal(x))
-snailImply = Implies(Snail(x), Animal(x))
-grainImply = Implies(Grain(x), Plant(x))
+implications = {
+    'wolf': Implies(Wolf(x), Animal(x)),
+    'fox': Implies(Fox(x), Animal(x)),
+    'bird': Implies(Bird(x), Animal(x)),
+    'caterpillar': Implies(Caterpillar(x), Animal(x)),
+    'snail': Implies(Snail(x), Animal(x)),
+    'grain': Implies(Grain(x), Plant(x))
+}
+for key in implications:
+    s.add(implications[key])
 
-wolfExists = Exists(x, Wolf(x))
-foxExists = Exists(x, Fox(x))
-birdExists = Exists(x, Bird(x))
-snailExists = Exists(x, Snail(x))
-caterpillarExists = Exists(x, Caterpillar(x))
-grainExists = Exists(x, Grain(x))
+existences = {
+    'wolf': Exists(x, Wolf(x)),
+    'fox': Exists(x, Fox(x)),
+    'bird': Exists(x, Bird(x)),
+    'caterpillar': Exists(x, Snail(x)),
+    'snail': Exists(x, Caterpillar(x)),
+    'grain': Exists(x, Grain(x))
+}
+
+for key in existences:
+    s.add(existences[key])
 
 
 def Smaller(x: int, y: int):
@@ -78,6 +88,7 @@ snailRule = Implies(Snail(x), Exists(y, And(Plant(y), Eats(x, y))))
 wolfFox = Implies(And(Wolf(x), Fox(y)), Not(Eats(x, y)))
 wolfGrain = Implies(And(Wolf(x), Grain(y)), Not(Eats(x, y)))
 birdSnail = Implies(And(Bird(x), Snail(y)), Not(Eats(x, y)))
+s.add(assumption, caterpillarRule, snailRule, wolfFox, wolfGrain, birdSnail)
 
 goal = Exists(x, Exists(y, And(
     Animal(x),
@@ -85,6 +96,5 @@ goal = Exists(x, Exists(y, And(
     Eats(x, y),
     Implies(Grain(z), Eats(y, z))
 )))
-s = Solver()
 s.add(goal)
 print(s.check())
