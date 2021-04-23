@@ -15,14 +15,14 @@
 # >>> execfile ('pythagorean_triples.py')           # in Python2 only
 # >>> exec(open("./pythagorean_triples.py").read()) # in Python2 and Python3
 
-from z3 import Solver, Ints, And, sat, Not, Exists
+from z3 import Solver, Ints, And, sat, Not, ForAll
 s = Solver()
 
 # Declare three integer variables/constants of Z3Py {x, y, z} :
 x, y, z, c = Ints('x y z c')
 
 # Assert that {x, y, z} are positive integers such that 0 < x < y < z :
-s.add(And(0 < x, x < y, y < z, c > 2))
+s.add(And(0 < x, x < y, y < z))
 
 # Assert that x*x + y*y = z*z, i.e. (x,y,z) is a Pythagorean triple :
 s.add(x * x + y * y == z * z)
@@ -37,11 +37,19 @@ s.add(x * x + y * y == z * z)
 
 results = []
 n = 0
-while s.check() == sat and n < 20:
+
+# This gives unknown. How can you change this to get sat
+s.add(ForAll(c, Not(
+    And(x % c == 0, y % c == 0, z % c == 0, c > 2, z >= c)
+)))
+
+print(s.check())
+while s.check() == sat and n < 5:
+    print(f"{n}/{5}")
+
     m = s.model()
     results.append(m)
     s.add(x != m[x])
-    s.add(Not(And(x % c == 0, y % c == 0, z % c == 0)))
 
     n = n+1
 
