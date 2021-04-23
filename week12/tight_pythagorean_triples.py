@@ -23,10 +23,7 @@ x, y, z = Ints('x y z')
 
 # Assert that {x, y, z} are positive integers such that 0 < x < y < z :
 s.add(And(0 < x, x < y, y < z))
-s.add(Or(
-    And(x % 2 == 1, y % 2 == 0, z == y + 1),
-    And(y % 2 == 1, x % 2 == 0, z == x + 1)
-))
+s.add(And(z == y + 1))
 
 # Assert that x*x + y*y = z*z, i.e. (x,y,z) is a Pythagorean triple :
 s.add(x * x + y * y == z * z)

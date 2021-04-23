@@ -39,9 +39,9 @@ results = []
 n = 0
 
 # This gives unknown. How can you change this to get sat
-s.add(ForAll(c, Not(
-    And(x % c == 0, y % c == 0, z % c == 0, c > 2, z >= c)
-)))
+s.add(Not(
+    And(x % c == 0, y % c == 0, c > 2, z >= c)
+))
 
 print(s.check())
 while s.check() == sat and n < 5:
