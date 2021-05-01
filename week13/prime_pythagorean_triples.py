@@ -31,7 +31,7 @@ s.add(x * x + y * y == z * z)
 # primitive triple is x = a^2 - b^2, y = 2ab, z = a^2 + b^2 where successive(a,b)
 # so lets say a = b + 1,
 # x = 2 * b + 1, y = b * (b + 1), z = 2 * b * b + 2 * b + 1
-s.add(Exists(b, And(x == 2*b + 1, y == 2*b*(b + 1), z == 2*b*b + 2*b + 1)))
+s.add(And(x == 2*b + 1, y == 2*b*(b + 1), z == 2*b*b + 2*b + 1))
 n = 1
 results = []
 while s.check() == sat and n <= 10:
