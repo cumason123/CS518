@@ -15,38 +15,28 @@
 # >>> execfile ('pythagorean_triples.py')           # in Python2 only
 # >>> exec(open("./pythagorean_triples.py").read()) # in Python2 and Python3
 
-from z3 import Solver, Ints, And, sat, Not, ForAll
+from z3 import Solver, Ints, And, sat, Exists
 s = Solver()
 
 # Declare three integer variables/constants of Z3Py {x, y, z} :
-x, y, z, c = Ints('x y z c')
+x, y, z = Ints('x y z')
 
 # Assert that {x, y, z} are positive integers such that 0 < x < y < z :
-s.add(And(0 < x, x < y, y < z))
+s.add(And(0 < x, x < y, y < z, x >= 4, x % 2 == 0))
 
 # Assert that x*x + y*y = z*z, i.e. (x,y,z) is a Pythagorean triple :
 s.add(x * x + y * y == z * z)
+s.add(x * x == 4 * y + 4)
 
-# Get without scale triples
-
-
+n = 1
 results = []
-n = 0
-
-# This gives unknown. How can you change this to get sat
-s.add(ForAll(c, Not(
-    And(x % c == 0, y % c == 0, c > 2, z >= c)
-)))
-
-print(s.check())
-while s.check() == sat and n < 5:
-    print(f"{n}/{5}")
-
+while s.check() == sat and n <= 10:
     m = s.model()
     results.append(m)
     s.add(x != m[x])
-
     n = n+1
+
+print(len(results), s.check())
 
 for p in range(len(results)):
     print(results[p])
